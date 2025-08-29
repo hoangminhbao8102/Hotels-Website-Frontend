@@ -1,0 +1,89 @@
+:root {
+  --primary: #0ea5e9;
+  --bg: #0b1020;
+  --surface: #11182a;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 1080px; margin: 0 auto; padding: 1rem; }
+
+nav.navbar {
+  background: var(--surface);
+  border-bottom: 1px solid #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+}
+
+.brand { font-weight: 700; letter-spacing: .3px; }
+nav .links { display: flex; gap: .75rem; }
+nav .links a { padding: .4rem .75rem; border-radius: .5rem; }
+nav .links a.active, nav .links a:hover { background: #0f172a; text-decoration: none; }
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: 0;
+  padding: .6rem .9rem;
+  border-radius: .6rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.secondary { background: #334155; }
+.btn.danger { background: var(--danger); }
+.btn.ghost { background: transparent; border: 1px solid #334155; color: var(--text); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+input, select, textarea {
+  background: #0f172a;
+  color: var(--text);
+  border: 1px solid #1f2937;
+  border-radius: .6rem;
+  padding: .6rem .75rem;
+  width: 100%;
+}
+
+label { display: block; margin: .35rem 0; color: var(--muted); font-size: .9rem; }
+
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { border-bottom: 1px solid #1f2937; padding: .6rem .5rem; }
+.table th { text-align: left; color: var(--muted); font-weight: 600; }
+
+footer { margin-top: 3rem; padding: 2rem 0; color: var(--muted); border-top: 1px solid #1f2937; }
+.badge { display: inline-block; padding: .2rem .45rem; border-radius: .5rem; font-size: .75rem; background: #0f172a; border: 1px solid #1f2937; }
+.muted { color: var(--muted); }
+.center { text-align: center; }
